@@ -385,7 +385,6 @@ A tiled map with the provided name must already be loaded
             ; create the canvas
             (let [^js/p5 canvas-wrapper (.createCanvas renderer width height)
                   canvas (.-canvas canvas-wrapper)]
-              (.removeAttribute canvas "style")
               (swap! hidden-state-atom assoc :canvas canvas))
             ; allow on-show to be run
             (put! setup-finished? true)))
